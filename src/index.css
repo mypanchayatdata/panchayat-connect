@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* ======================================================== */
+/* 🖨️ CSS PRINT OPTIMIZATION FOR PHYSICAL DOCUMENT SUBMISSION */
+/* ======================================================== */
+@page {
+  size: A4 portrait;
+  margin: 10mm 8mm 12mm 8mm;
+}
+
+@media print {
+  html, body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide Navigation, Sidebars, Modals background, Action buttons */
+  .no-print,
+  nav,
+  aside,
+  header,
+  footer,
+  .sidebar,
+  .top-navbar,
+  .mobile-bottom-bar,
+  button,
+  .toast,
+  .modal-backdrop {
+    display: none !important;
+  }
+
+  /* Page Break Rules */
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-break-before {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Table styling for print */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    break-inside: auto;
+  }
+
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  /* Remove shadows and rounded edges for clean paper printing */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+

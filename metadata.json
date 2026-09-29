@@ -1,0 +1,6 @@
+{
+  "name": "Panchayat Connect",
+  "description": "Community Information & Field Work Management System for Panchayat, Village, Ward, and Family administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
